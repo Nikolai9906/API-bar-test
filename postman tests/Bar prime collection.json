@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "47b86264-c7ff-413a-ae7d-0805969bf752",
+		"name": "Bar prime operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET PRIME RESULT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Steven\",\r\n  \"lastName\": \"Vega\",\r\n  \"email\": \"nico1@gmail.com\",\r\n  \"password\": \"1234\",\r\n  \"rol\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/operation?iteration=3&idArray=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"operation"
+					],
+					"query": [
+						{
+							"key": "iteration",
+							"value": "3"
+						},
+						{
+							"key": "idArray",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
