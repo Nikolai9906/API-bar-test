@@ -8,9 +8,9 @@ respuesta
 
 ## Prerequisitos
 Tener instalado:
-- Java.
-- Maven.
-- Postman.
+- Java 1.8.
+- Maven 3.8.4
+- Postman 9.11.
 
 Entender sobre peticiones http, servidores y demás, así como el lenguaje JAVA en el que fue realizado este proyecto.
 
@@ -21,16 +21,22 @@ Descargue o clone el repositorio con el siguiente comando.
     git clone https://github.com/Nikolai9906/API-bar-test
 
 - Luego abra el proyecto con su entorno de desarrollo preferido
-- Compile las dependecias que gradle pedira para la ejecucion del proyecto
-- Por ultimo corralo con ayuda del entorno de desarrollo para tener el ambiente Backend en funcionamiento
+- Compile las dependecias que Maven pedira para la ejecucion del proyecto
+- Por ultimo corralo con ayuda del entorno de desarrollo para tener el ambiente Backend en funcionamiento, o por medio del siguiente comando:
+```
+./mvnw spring-boot:run
+```
 
-## Operaciones
+## Peticiones de la API
 Podremos realizar distintas peticiones de acuerdo a lo requerido por el usuario, hay que tener en cuenta que el proyecto funciona con Spring Security y muchas de las peticiones requieren un token de autenticacion
 - **GET**
 :  En este caso veremos la prueba de la peticions GET por medio de la herramienta POSTMAN
 
 ## Pruebas
-### Operacion
+### GET
+```
+http://localhost:8080/operation?iteration=3&idArray=5
+```
 ![](img/postman-get.png)
 
 ## Documentacion API
@@ -45,14 +51,16 @@ De acuerdo al problema desarrollado se crearon diferentes paquetes para cumplir 
 forma se crearon otros paquetes de manera de que si se quiera extender y agregar diferentes funcionalidades, se pueda trabajar organizadamente
 sin modificar la estructura y orden del proyecto.
 ```
-└───aldeamo
-    └───test
-        ├───controller
-        ├───data
-        ├───dto
-        ├───repository
-        └───service
-            └───impl
+└───com
+    └───aldeamo
+        └───bar
+            ├───config
+            ├───controller
+            ├───data
+            ├───dto
+            ├───repository
+            └───service
+                └───impl
 
 ```
 ## Tecnologias y herramientas
