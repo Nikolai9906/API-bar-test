@@ -34,7 +34,9 @@ Podremos realizar distintas peticiones de acuerdo a lo requerido por el usuario,
 ![](img/postman-get.png)
 
 ## Documentacion API
-- [Swagger](http://localhost:8080/swagger-ui/index.html) Herramienta de documentacion para servicio web RESTful
+[Swagger](http://localhost:8080/swagger-ui/index.html) Herramienta de documentacion para servicio web RESTful
+
+    http://localhost:8080/swagger-ui/index.html
 
 ![](img/api-documentation.png)
 
