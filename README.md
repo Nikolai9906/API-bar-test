@@ -33,6 +33,11 @@ Podremos realizar distintas peticiones de acuerdo a lo requerido por el usuario,
 ### Operacion
 ![](img/postman-get.png)
 
+## Documentacion API
+- [Swagger](http://localhost:8080/swagger-ui/index.html) Herramienta de documentacion para servicio web RESTful
+
+![](img/api-documentation.png)
+
 ## Arquitectura
 De acuerdo al problema desarrollado se crearon diferentes paquetes para cumplir con las funcionalidades requeridas por el ejercicio. De igual 
 forma se crearon otros paquetes de manera de que si se quiera extender y agregar diferentes funcionalidades, se pueda trabajar organizadamente
@@ -51,6 +56,7 @@ sin modificar la estructura y orden del proyecto.
 ## Tecnologias y herramientas
 
 - [Spring Boot](https://spring.io/projects/spring-boot) herramienta que nos permite crear un proyecto como con Spring Framework, solo que Spring Boot elimina ciertas configuraciones repetitivas requeridas para desplegar la aplicación o proyecto.
+- [Swagger](https://swagger.io/docs/) conjunto de herramientas de software de código abierto para diseñar, construir, documentar, y utilizar servicios web RESTful.
 
 ## Construido
 - [IntelliJ](https://www.jetbrains.com/es-es/idea/) Editor de JAVA donde se puede compilar el proyecto.

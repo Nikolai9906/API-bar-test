@@ -13,7 +13,7 @@ public class BarServiceImpl implements BarService {
 
     private List<Integer> primeArray;
     private List<Integer> arrayA;
-    private List<Integer> arrayB = new ArrayList<>();
+    private List<Integer> arrayB ;
     private final HashMap<Integer, List<Integer> > arraysMap = new HashMap<>();
 
     public BarServiceImpl() {
@@ -23,10 +23,15 @@ public class BarServiceImpl implements BarService {
         arraysMap.put( 3 , (Arrays.asList(5,7,9,11,13)) );
         arraysMap.put( 4 , (Arrays.asList(6,4,2,12,15)) );
         arraysMap.put( 5 , (Arrays.asList(7,10,15,11,9)) );
+        /**
+         * Example input
+         */
+        arraysMap.put( 6 , (Arrays.asList(2,3,4,5,6,7)) );
     }
 
     @Override
     public List<Integer> primeOperation(int Q, int idArray) {
+        arrayB = new ArrayList<>();
         arrayA = arraysMap.get(idArray);
         for(int j = 0; j < Q; j++){
             ArrayList<Integer> temp = new ArrayList<>();
@@ -40,6 +45,7 @@ public class BarServiceImpl implements BarService {
             arrayA = temp;
         }
         if(arrayA.size() == 1) arrayB.add(arrayA.get(0));
+        System.out.println(arrayB);
         return arrayB;
     }
 }
