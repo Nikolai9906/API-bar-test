@@ -1,6 +1,6 @@
-package aldeamo.test.controller;
+package com.aldeamo.bar.controller;
 
-import aldeamo.test.service.BarService;
+import com.aldeamo.bar.service.BarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,9 +17,7 @@ public class BarController {
 
     @GetMapping("/operation")
     @ResponseBody
-
-    public List<Integer> create(@RequestParam (name = "iteration", value = "iteration") int iteration, @RequestParam (name = "idArray", value = "idArray") int idArray ) {
+    public List<Integer> create(@RequestParam (name = "iteration", value = "iteration") int iteration, @RequestParam (name = "idArray", value = "idArray") int idArray ) throws Exception {
             return barService.primeOperation(iteration,idArray);
-
     }
 }

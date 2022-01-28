@@ -1,0 +1,3 @@
+POSTGRESQL_URI = postgresql://ec2-3-224-157-224.compute-1.amazonaws.com:5432/d5sed65fpa0of3?user=aqptwjmqhlpkmq&password=306817cf4d81cda3fa6c67c5b0a0223107a2b4c23a38c7ab3c14c386c198a2f5
+POSTGRESQL_USERNAME =aqptwjmqhlpkmq
+POSTGRESQL_PASSWORD =306817cf4d81cda3fa6c67c5b0a0223107a2b4c23a38c7ab3c14c386c198a2f5

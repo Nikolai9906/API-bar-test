@@ -1,4 +1,4 @@
-package aldeamo.test;
+package com.aldeamo.bar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
