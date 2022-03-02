@@ -100,6 +100,7 @@ sin modificar la estructura y orden del proyecto.
 ## Pruebas
 - [Mockito](https://site.mockito.org) Mockito es un marco de prueba de código abierto para Java lanzado bajo la Licencia MIT.
 
+*NOTA:* Se genero un archivo de Postman el cual cuenta con las pruebas anteriormente mostradas de cada HTTP request de la aplicacion
 
 ## Licencia
 Este programa es de uso libre, puede ser usado por cualquier persona.

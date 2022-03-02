@@ -47,6 +47,90 @@
 					]
 				}
 			},
+			"response": [
+				{
+					"name": "GET PRIME RESULT",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Steven\",\r\n  \"lastName\": \"Vega\",\r\n  \"email\": \"nico1@gmail.com\",\r\n  \"password\": \"1234\",\r\n  \"rol\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/operation?iteration=3&idArray=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation"
+							],
+							"query": [
+								{
+									"key": "iteration",
+									"value": "3"
+								},
+								{
+									"key": "idArray",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 21:09:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    6,\n    4,\n    2,\n    3,\n    5,\n    7\n]"
+				}
+			]
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"3"
+					]
+				}
+			},
 			"response": []
 		}
 	]
