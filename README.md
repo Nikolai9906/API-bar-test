@@ -30,24 +30,36 @@ Descargue o clone el repositorio con el siguiente comando.
 ## Base de Datos
 - La base de datos es suministrada por la aplicacion Heroku, la cual provee una pequeño espacio para poder trabajar en la base de datos sin ninguna problema. De esta manera trabajamos con una base de datos que no es Local ofreciendo la facilidad de trabajar en ella sin ningun problema; la informacion de la base de datos se encuentra en este archivo
 [PostgreSQL_DB](documentation/datos.txt) 
-- Para la configuracion de la base de datos en el proyecto, se establecieron variables de entorno para ofrecer un entorno de desarrollo mas seguro
+- Para la configuracion de la base de datos en el proyecto, se establecieron variables de entorno para ofrecer un mayor seguridad en la aplicacion
 ```
 spring.datasource.url=${POSTGRESQL_URI}
 spring.datasource.username=${POSTGRESQL_USERNAME}
 spring.datasource.password=${POSTGRESQL_PASSWORD}
 ```
 
+De igual manera se comparte los valores de cada variable de entorno para poder tener acceso a la base de datos
+```
+POSTGRESQL_PASSWORD=306817cf4d81cda3fa6c67c5b0a0223107a2b4c23a38c7ab3c14c386c198a2f5;
+POSTGRESQL_USERNAME=aqptwjmqhlpkmq;
+POSTGRESQL_URI=jdbc:postgresql://ec2-3-224-157-224.compute-1.amazonaws.com/d5sed65fpa0of3
+```
 ## Peticiones de la API
 Podremos realizar distintas peticiones de acuerdo a lo requerido por el usuario, hay que tener en cuenta que el proyecto funciona con Spring Security y muchas de las peticiones requieren un token de autenticacion
 - **GET**
 :  En este caso veremos la prueba de la peticions GET por medio de la herramienta POSTMAN
 
 ## Pruebas
-### GET
+### GET RESULT
 ```
 http://localhost:8080/operation?iteration=3&idArray=5
 ```
 ![](img/postman-get.png)
+
+### GET ARRAYS BY ID
+```
+http://localhost:8080/3
+```
+![](img/postman-getBYID.png)
 
 ## Documentacion API
 [Swagger](http://localhost:8080/swagger-ui/index.html) Herramienta de documentacion para servicio web RESTful
@@ -84,6 +96,10 @@ sin modificar la estructura y orden del proyecto.
 - [Maven](https://maven.apache.org) Administrador de dependencias.
 
 - [Postman](https://www.postman.com) Aplicacion de pruebas API.
+
+## Pruebas
+- [Mockito](https://site.mockito.org) Mockito es un marco de prueba de código abierto para Java lanzado bajo la Licencia MIT.
+
 
 ## Licencia
 Este programa es de uso libre, puede ser usado por cualquier persona.

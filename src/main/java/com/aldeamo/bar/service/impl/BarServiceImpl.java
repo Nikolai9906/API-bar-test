@@ -15,12 +15,12 @@ public class BarServiceImpl implements BarService {
     private List<Integer> arrayA ;
     private List<Integer> arrayB ;
 
-    @Autowired
-    GlassesArrayRepository arraysRepository;
+    private final GlassesArrayRepository arrayRepository;
 
-    public BarServiceImpl() {
+
+    public BarServiceImpl(@Autowired GlassesArrayRepository arraysRepository) {
+        this.arrayRepository = arraysRepository;
         primeArray = new ArrayList<>(Arrays.asList( 2, 3, 5, 7, 11, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97));
-
     }
 
     @Override
@@ -42,9 +42,18 @@ public class BarServiceImpl implements BarService {
         return arrayB;
     }
 
+    @Override
+    public List<Integer> findById(int id) {
+        Optional<GlassesArray> object = arrayRepository.findById(id);
+        String[] stringNumbers = object.get().getInput_array().split(",");
+        List<Integer> numbers = new ArrayList<>();
+        for(String s: stringNumbers) numbers.add(Integer.valueOf(s));
+        return numbers;
+    }
+
     public void setArrayA(int idArray)throws Exception{
         arrayA = new ArrayList<>();
-        GlassesArray tempGlassArray = arraysRepository.findById(idArray).orElseThrow(() -> new Exception());
+        GlassesArray tempGlassArray = arrayRepository.findById(idArray).orElseThrow(() -> new Exception());
         String[] numbers = tempGlassArray.getInput_array().split(",");
         for(String s: numbers) arrayA.add(Integer.valueOf(s));
     }
