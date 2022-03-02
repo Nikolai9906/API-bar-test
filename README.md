@@ -28,9 +28,9 @@ Descargue o clone el repositorio con el siguiente comando.
 ./mvnw spring-boot:run
 ```
 ## Base de Datos
-- La base de datos es suministrada por la aplicacion Heroku, la cual provee una pequeño espacio para poder trabajar en la base de datos sin ninguna problema. De esta manera trabajamos con una base de datos que no es Local ofreciendo la facilidad de trabajar en ella sin ningun problema; la informacion de la base de datos se encuentra en este archivo
-[PostgreSQL_DB](documentation/datos.txt) 
+- La base de datos es suministrada por la aplicacion Heroku, la cual provee una pequeño espacio para poder trabajar en la base de datos sin ninguna problema. De esta manera trabajamos con una base de datos que no es Local ofreciendo la facilidad de trabajar en ella sin ningun problema; la informacion de la base de datos se encuentra en este archivo [PostgreSQL_DB](documentation/datos.txt) 
 - Para la configuracion de la base de datos en el proyecto, se establecieron variables de entorno para ofrecer un mayor seguridad en la aplicacion
+
 ```
 spring.datasource.url=${POSTGRESQL_URI}
 spring.datasource.username=${POSTGRESQL_USERNAME}
